@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DoxWars</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <img id="title-img" src="./logo/logo.png">
+  <h1>Hacker Battle Game</h1>
+  <template v-if="!selected.player.name" id="player-selector">
+    <h2>Choose Your Team:</h2>
+    <div class="selection-group">
+      <div v-for="player in players" class="monster" :id="player.name" @click="selectedPlayer($event)">
+        <img class="monster-icon" :src="player.image">
+        <div class="monster-name-bg">
+          <h3 class="monster-name">{{ player.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template v-if="!selected.monster.name" id="monster-selector">
+    <h2>Choose Your Hacker:</h2>
+    <div class="selection-group">
+      <div v-for="monster in monsters" class="monster" @click="selectedMonster($event)" :id="monster.name">
+        <img class="monster-icon" :src="monster.image">
+        <div class="monster-name-bg">
+          <h3 class="monster-name">{{ monster.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template v-if="selected.player.name && selected.monster.name">
+    <div id="battle-zone">
+    <div id="user">
+      <figure id="player-section">
+        <img :src="selected.player.image" id="player-image">
+        <figcaption>{{ selected.player.name }}</figcaption>
+      </figure>
+      <div id="player-monster-section">
+        <img :src="selected.monster.image" id="player-monster-image">
+        <div class="hp-outline">
+            <div class="hp-bar" :style="hpWidthPlayer"></div>
+          </div>
+      </div>
+    </div>
+    <div id="opponent">
+      <figure id="opponent-section">
+        <img :src="opponent.player.image" id="opponent-image">
+        <figcaption>{{ opponentName }}</figcaption>
+      </figure>
+      <div id="opponent-monster-section">
+        <img :src="opponent.monster.image" id="opponent-monster-image">
+        <div class="hp-outline">
+          <div class="hp-bar" :style="hpWidthOpponent"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="button-zone">
+      <div id="attack-options">
+        <button v-for="attack in selected.monster.attacks" @click="attackMove($event)" :id="attack.name">{{ attack.name }}</button>
+      </div>
+      <div id="heal-options">
+        <button id="heal" @click="healMove($event)">Heal</button>
+      </div>
+      <div id="pass-options">
+        <button id="pass" @click="passMove($event)">Pass</button>
+      </div>
+    </div>
+    <div id="description-zone">
+      <p v-if="beginning" class="battle-description">{{ opponent.player.name }} wants to fight!</p>
+      <p v-if="userAttacking" class="battle-description">{{ selected.monster.name }} used {{ userAttackName }}!</p>
+      <p v-if="enemyAttacking" class="battle-description">Enemy {{ opponent.monster.name }} used {{ enemyAttackName }}!</p>
+      <p v-if="userHeal" class="battle-description">{{ selected.player.name }} gave {{ selected.monster.name }} a potion!</p>
+      <p v-if="userWait" class="battle-description">{{ selected.monster.name }} waited.</p>
+    </div>
+  </template>
+</div>
+<footer><p></p></footer>
+<!-- partial -->
+  <script src='https://unpkg.com/vue@2.2.1'></script><script  src="./script.js"></script>
+
+</body>
+</html>
