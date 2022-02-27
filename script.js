@@ -200,8 +200,10 @@ new Vue({
             category: 'normal',
             power: 40,
             accuracy: 0
-          },
-          {
+          }
+        ]
+      },
+      {
           name: 'zonehax',
           image: './doxmon/zonehax.png',
           types: ['bug', 'poison'],
@@ -233,8 +235,10 @@ new Vue({
               category: 'normal',
               power: 40,
               accuracy: 0
-            },
-            {
+            }
+          ]
+        },
+        {
             name: 'TCP Solid',
             image: './doxmon/tcps.png',
             types: ['bug', 'poison'],
@@ -266,7 +270,7 @@ new Vue({
                 category: 'normal',
                 power: 40,
                 accuracy: 0
-              }
+            }
         ]
       }
     ]
