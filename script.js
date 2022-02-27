@@ -200,7 +200,73 @@ new Vue({
             category: 'normal',
             power: 40,
             accuracy: 0
-          }
+          },
+          {
+          name: 'zonehax',
+          image: './doxmon/zonehax.png',
+          types: ['bug', 'poison'],
+          attacks: [
+            {
+              name: 'buys bots',
+              moveType: 'normal',
+              category: 'normal',
+              power: 15,
+              accuracy: 100
+            },
+            {
+              name: 'compair funds',
+              moveType: 'normal',
+              category: 'normal',
+              power: 40,
+              accuracy: 0
+            },
+            {
+              name: 'moves to net hotel',
+              moveType: 'normal',
+              category: 'normal',
+              power: 40,
+              accuracy: 0
+            },
+            {
+              name: 'fake funds',
+              moveType: 'normal',
+              category: 'normal',
+              power: 40,
+              accuracy: 0
+            },
+            {
+            name: 'TCP Solid',
+            image: './doxmon/tcps.png',
+            types: ['bug', 'poison'],
+            attacks: [
+              {
+                name: 'groom kid',
+                moveType: 'normal',
+                category: 'normal',
+                power: 15,
+                accuracy: 100
+              },
+              {
+                name: 'buy stripprs',
+                moveType: 'normal',
+                category: 'normal',
+                power: 40,
+                accuracy: 0
+              },
+              {
+                name: 'post tweet',
+                moveType: 'normal',
+                category: 'normal',
+                power: 40,
+                accuracy: 0
+              },
+              {
+                name: 'get catfished',
+                moveType: 'normal',
+                category: 'normal',
+                power: 40,
+                accuracy: 0
+              }
         ]
       }
     ]
