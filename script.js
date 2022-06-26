@@ -275,7 +275,7 @@ new Vue({
       },
       {
         name: 'i4n',
-        image: './doxmon/i4n.png',
+        image: './doxmon/i8n.png',
         types: ['idk dawg'],
         attacks: [
           {
