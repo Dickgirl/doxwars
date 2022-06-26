@@ -274,10 +274,10 @@ new Vue({
         ]
       },
       {
-        name: 'i4n',
-        image: './doxmon/i8n.png',
-        types: ['idk dawg'],
-        attacks: [
+            name: 'i4n',
+            image: './doxmon/i8n.png',
+            types: ['idk dawg'],
+            attacks: [
           {
             name: 'hack fbi',
             moveType: 'normal',
