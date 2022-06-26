@@ -272,7 +272,41 @@ new Vue({
                 accuracy: 0
             }
         ]
-      }
+      },
+      {
+        name: 'i4n',
+        image: './doxmon/i4n.png',
+        types: ['idk dawg'],
+        attacks: [
+          {
+            name: 'hack fbi',
+            moveType: 'normal',
+            category: 'normal',
+            power: 40,
+            accuracy: 100
+          },
+          {
+            name: 'harass kittens',
+            moveType: 'fire',
+            category: 'special',
+            power: 40,
+            accuracy: 100
+          },
+          {
+            name: 'be poor',
+            moveType: 'normal',
+            category: 'normal',
+            power: 70,
+            accuracy: 100
+          },
+          {
+            name: 'reverse groom e-women',
+            moveType: 'fire',
+            category: 'special',
+            power: 90,
+            accuracy: 100
+          }
+        ]
     ]
   },
   computed: {
