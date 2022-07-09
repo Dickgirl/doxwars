@@ -272,7 +272,8 @@ new Vue({
                 accuracy: 0
             }
         ]
-      },
+      }
+    ]
   },
   computed: {
     opponentName: function () {
